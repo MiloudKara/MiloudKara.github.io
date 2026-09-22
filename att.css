@@ -1,0 +1,570 @@
+/* =========================================================
+   AT&T CRM CASE STUDY
+   ========================================================= */
+
+.att-page {
+  --att-ink: #0b0f12;
+  --att-dark: #1b1f35;
+  --att-paper: #eff1ec;
+  --att-line: rgba(11, 15, 18, 0.14);
+  --att-soft: #cfd5d3;
+  --att-muted: #7b8584;
+  --att-accent: #18b7e9;
+  --att-blue: #425fd0;
+  background: #090909;
+}
+
+.att-shell {
+  background: var(--att-paper);
+  color: var(--att-ink);
+}
+
+.att-hero {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  width: 100%;
+  max-width: 100%;
+  min-height: calc(100vh - 84px);
+  overflow: hidden;
+  background: #4E4E78;
+  color: #f1f4f2;
+}
+
+.att-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 85px 7vw;
+}
+
+.att-back {
+  width: fit-content;
+  margin-bottom: 70px;
+  color: rgba(241, 244, 242, 0.55);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.att-back:hover { color: #f1f4f2; }
+
+.att-eyebrow,
+.att-section-label,
+.att-kicker,
+.att-facts span,
+.att-closing-meta,
+.att-next {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.att-eyebrow,
+.att-kicker {
+  color: rgba(241, 244, 242, 0.46);
+  font-size: 9px;
+}
+
+.att-hero h1 {
+  max-width: 750px;
+  margin-top: 22px;
+  font: 500 clamp(58px, 7vw, 112px) / 0.9 var(--font-display);
+  letter-spacing: -0.065em;
+}
+
+.att-hero h1 span {
+  color: #dfe9e8;
+}
+
+.att-tagline {
+  max-width: 450px;
+  margin-top: 28px;
+  color: rgba(241, 244, 242, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.att-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 35px;
+}
+
+.att-tags span {
+  border: 1px solid rgba(241, 244, 242, 0.18);
+  padding: 9px 11px;
+  color: rgba(241, 244, 242, 0.62);
+  font: 600 9px var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.att-hero-art {
+  position: relative;
+  overflow: hidden;
+  background: #0c1013;
+}
+
+.att-hero-art img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.att-hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 10, 15, 0.03), rgba(6, 10, 15, 0.28));
+  pointer-events: none;
+}
+
+.att-caption {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgba(241, 244, 242, 0.72);
+  font: 600 8px var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.att-section {
+  padding: 120px 7vw;
+  border-top: 1px solid var(--att-line);
+}
+
+.att-dark {
+  background: var(--att-dark);
+  color: #f1f4f2;
+  border-top-color: rgba(241, 244, 242, 0.1);
+}
+
+.att-section-label {
+  margin-bottom: 62px;
+  color: rgba(11, 15, 18, 0.4);
+  font-size: 9px;
+}
+
+.att-dark .att-section-label,
+.att-dark .att-kicker {
+  color: rgba(241, 244, 242, 0.4);
+}
+
+.att-intro {
+  max-width: 1020px;
+  margin-bottom: 56px;
+}
+
+.att-intro h2,
+.att-feature h2,
+.att-story h2,
+.att-closing h2 {
+  margin-top: 18px;
+  font: 500 clamp(42px, 5.5vw, 82px) / 0.95 var(--font-display);
+  letter-spacing: -0.045em;
+}
+
+.att-intro h2 em,
+.att-feature h2 em,
+.att-story h2 em,
+.att-closing h2 em {
+  color: var(--att-blue);
+  font-style: normal;
+}
+
+.att-dark h2 em { color: #a4e5fa; }
+
+.att-copy {
+  max-width: 720px;
+  margin-top: 24px;
+  color: rgba(11, 15, 18, 0.62);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.att-dark .att-copy {
+  color: rgba(241, 244, 242, 0.58);
+}
+
+.att-image {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.att-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.att-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--att-line);
+  margin-top: 60px;
+}
+
+.att-facts div {
+  min-height: 145px;
+  padding: 24px 18px 18px 0;
+  border-right: 1px solid var(--att-line);
+}
+
+.att-facts div:last-child { border-right: 0; }
+
+.att-facts span {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(11, 15, 18, 0.42);
+  font-size: 8px;
+}
+
+.att-facts strong {
+  font: 500 clamp(38px, 4vw, 64px) / 0.9 var(--font-display);
+  letter-spacing: -0.05em;
+}
+
+.att-feature,
+.att-story {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.att-feature > div,
+.att-story > div {
+  min-width: 0;
+}
+
+.att-feature.reverse,
+.att-story.reverse {
+  grid-template-columns: 1.22fr 0.78fr;
+}
+
+.att-feature.reverse > div:last-child,
+.att-story.reverse > div:last-child {
+  order: 2;
+}
+
+.att-feature.reverse > div:first-child,
+.att-story.reverse > div:first-child {
+  order: 1;
+}
+
+.att-feature .att-copy,
+.att-story .att-copy {
+  max-width: 520px;
+}
+
+.att-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.att-list div {
+  padding: 13px 0;
+  border-top: 1px solid var(--att-line);
+  color: rgba(11, 15, 18, 0.76);
+  font: 500 12px var(--font-display);
+}
+
+.att-dark .att-list div {
+  color: rgba(241, 244, 242, 0.72);
+  border-top-color: rgba(241, 244, 242, 0.1);
+}
+
+.att-closing {
+  padding: 145px 7vw 160px;
+  background: #0c1013;
+  color: #f1f4f2;
+}
+
+.att-closing h2 {
+  max-width: 920px;
+  font-size: clamp(58px, 8vw, 124px);
+}
+
+.att-closing p {
+  max-width: 660px;
+  margin-top: 28px;
+  color: rgba(241, 244, 242, 0.58);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.att-closing-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 52px;
+  color: rgba(241, 244, 242, 0.5);
+  font-size: 9px;
+}
+
+.att-closing-meta span {
+  border: 1px solid rgba(241, 244, 242, 0.15);
+  padding: 9px 11px;
+}
+
+.att-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  padding: 35px 7vw;
+  background: var(--att-paper);
+  color: var(--att-ink);
+  font-size: 9px;
+}
+
+.att-next a {
+  display: grid;
+  gap: 5px;
+}
+
+.att-next strong {
+  font: 500 18px var(--font-display);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+/* =========================================================
+   WORK THUMBNAIL
+   ========================================================= */
+
+.att-project-card {
+  min-width: 0;
+}
+
+.att-project-card .att-visual {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 315px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-image: url('att-assets/ATT-cover-s.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.att-project-card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.att-project-card .att-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 82, 173, 0.01), rgba(225, 168, 25, 0.01));
+}
+
+.att-cover-label {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 10%;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  color: #f0f2ed;
+}
+
+.att-cover-label span,
+.att-cover-label em {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+}
+
+.att-cover-label em { color: rgba(240, 242, 237, 0.68); }
+
+.att-cover-label strong {
+  font: 500 clamp(42px, 5vw, 72px) / 0.85 var(--font-display);
+  letter-spacing: -0.065em;
+}
+
+.att-cover-arrow {
+  position: absolute;
+  right: 6%;
+  top: 7%;
+  z-index: 2;
+  color: #f0f2ed;
+  font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .att-hero,
+  .att-feature,
+  .att-feature.reverse,
+  .att-story,
+  .att-story.reverse {
+  grid-template-columns: minmax(0, 1fr);
+}
+  .att-feature > div,
+  .att-story > div {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .att-hero-copy {
+    padding: 70px 7vw 75px;
+  }
+
+.att-hero-art {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.att-hero-art img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
+  .att-section {
+    padding: 90px 7vw;
+  }
+  
+  .att-challenge {
+  padding-top: 20px;
+  padding-bottom: 0;
+  border-top: 0;
+}
+
+  .att-challenge .att-image {
+  width: 100%;
+}
+
+  .att-feature,
+  .att-feature.reverse,
+  .att-story,
+  .att-story.reverse {
+    gap: 45px;
+  }
+
+  .att-feature.reverse > div:last-child,
+  .att-story.reverse > div:last-child,
+  .att-feature.reverse > div:first-child,
+  .att-story.reverse > div:first-child {
+    order: initial;
+  }
+
+  .att-facts {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+  .att-facts div {
+    border-right: 0;
+    border-bottom: 1px solid var(--att-line);
+  }
+
+  .att-facts div:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 560px) {
+  .att-hero-copy {
+    padding: 55px 6vw 60px;
+  }
+
+  .att-back { margin-bottom: 45px; }
+
+  .att-hero h1 {
+    font-size: 18vw;
+  }
+
+  .att-tagline {
+    font-size: 13px;
+  }
+
+ .att-hero-art {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.att-hero-art img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
+  .att-section {
+    padding: 72px 6vw;
+  }
+
+  .att-section-label {
+    margin-bottom: 42px;
+  }
+
+  .att-intro h2,
+  .att-feature h2,
+  .att-story h2 {
+    font-size: 48px;
+  }
+
+  .att-copy {
+    font-size: 14px;
+  }
+
+  .att-closing {
+    padding: 100px 6vw;
+  }
+
+  .att-closing h2 {
+    font-size: 62px;
+  }
+
+  .att-next {
+    padding: 28px 6vw;
+  }
+}
+
+/* =========================================================
+   AT&T NAVBAR
+   Keep the shared navbar visually identical to other pages
+   ========================================================= */
+
+
+
+.att-page .site-header {
+  background: rgba(7, 9, 10, 0.86);
+}

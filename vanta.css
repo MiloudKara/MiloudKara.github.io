@@ -1,0 +1,368 @@
+/* =========================================================
+   VANTA CASE STUDY
+   ========================================================= */
+
+.vanta-page {
+  --vanta-black: #07090a;
+  --vanta-surface: #0d1011;
+  --vanta-ink: #111516;
+  --vanta-white: #f3f3ef;
+  --vanta-muted: #a0a6a5;
+  --vanta-line: rgba(243, 243, 239, 0.12);
+  --vanta-green: #55dd88;
+  --vanta-blue: #86a9ff;
+  background: var(--vanta-black);
+  color: var(--vanta-white);
+}
+
+.vanta-page .site-header {
+  background: rgba(7, 9, 10, 0.86);
+}
+
+.vanta-hero {
+  min-height: calc(100vh - 84px);
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  background: var(--vanta-black);
+}
+
+.vanta-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 7vw;
+}
+
+.vanta-back {
+  width: fit-content;
+  color: rgba(243, 243, 239, 0.5);
+  font: 500 10px var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 72px;
+  transition: color 0.25s ease;
+}
+
+.vanta-back:hover { color: var(--vanta-white); }
+
+.vanta-eyebrow,
+.vanta-kicker,
+.vanta-label,
+.vanta-facts span,
+.vanta-caption,
+.vanta-next {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vanta-eyebrow {
+  color: rgba(243, 243, 239, 0.46);
+  font-size: 9px;
+  margin-bottom: 22px;
+}
+
+.vanta-hero h1 {
+  font: 600 clamp(78px, 10vw, 160px) / 0.82 var(--font-display);
+  letter-spacing: -0.08em;
+}
+
+.vanta-tagline {
+  margin-top: 26px;
+  max-width: 520px;
+  font: 500 clamp(24px, 2.4vw, 40px) / 1.05 var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.vanta-tagline span { color: var(--vanta-muted); }
+
+.vanta-hero-text {
+  max-width: 430px;
+  margin-top: 24px;
+  color: rgba(243, 243, 239, 0.55);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.vanta-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 460px;
+  margin-top: 42px;
+  border-top: 1px solid var(--vanta-line);
+}
+
+.vanta-facts div {
+  padding: 15px 14px 15px 0;
+  border-bottom: 1px solid var(--vanta-line);
+}
+
+.vanta-facts span {
+  display: block;
+  color: rgba(243, 243, 239, 0.36);
+  font-size: 8px;
+}
+
+.vanta-facts strong {
+  display: block;
+  margin-top: 5px;
+  font: 500 12px var(--font-display);
+}
+
+.vanta-hero-art {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+}
+
+.vanta-hero-art img {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  display: block;
+  object-fit: cover;
+}
+
+.vanta-caption {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgba(243, 243, 239, 0.72);
+  font-size: 8px;
+}
+
+.vanta-section {
+  padding: 120px 7vw;
+  border-top: 1px solid var(--vanta-line);
+  background: var(--vanta-black);
+}
+
+.vanta-section-light {
+  background: #e8e9e5;
+  color: #111516;
+  border-top-color: rgba(17, 21, 22, 0.12);
+}
+
+.vanta-label {
+  margin-bottom: 56px;
+  color: rgba(243, 243, 239, 0.38);
+  font-size: 9px;
+}
+
+.vanta-section-light .vanta-label,
+.vanta-section-light .vanta-kicker {
+  color: rgba(17, 21, 22, 0.4);
+}
+
+.vanta-story {
+  display: grid;
+  grid-template-columns: 1fr 0.62fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.vanta-story .vanta-description {
+  color: rgba(0, 0, 0, 0.56);
+} 
+
+.vanta-story h2,
+.vanta-feature h2,
+.vanta-closing h2 {
+  margin-top: 17px;
+  font: 500 clamp(40px, 5.5vw, 78px) / 0.95 var(--font-display);
+  letter-spacing: -0.055em;
+}
+
+.vanta-story h2 span,
+.vanta-feature h2 span { color: var(--vanta-muted); }
+
+.vanta-kicker {
+  color: rgba(243, 243, 239, 0.46);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.vanta-story p,
+.vanta-feature p,
+.vanta-closing p {
+  max-width: 610px;
+  margin-top: 24px;
+  color: rgba(243, 243, 239, 0.56);
+  font-size: 14px;
+  line-height: 1.85;
+}
+.vanta-feature .supporting-text {
+  color: #000000;
+}
+
+.vanta-feature {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.vanta-feature.reverse {
+  grid-template-columns: 1.28fr 0.72fr;
+}
+
+.vanta-feature.reverse > div:last-child { order: 2; }
+
+.vanta-feature.reverse .vanta-art { order: 1; }
+
+.vanta-art {
+  overflow: hidden;
+  background: var(--vanta-surface);
+  border: 1px solid rgba(243, 243, 239, 0.1);
+}
+
+.vanta-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vanta-highlight {
+  color: var(--vanta-green) !important;
+}
+
+.vanta-blue { color: var(--vanta-blue) !important; }
+
+.vanta-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.vanta-gallery .vanta-art:first-child { grid-column: 1 / -1; }
+
+.vanta-closing {
+  padding: 145px 7vw 160px;
+  background: #060708;
+}
+
+.vanta-closing h2 { max-width: 1000px; }
+.vanta-closing h2 span { color: var(--vanta-muted); }
+
+.vanta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 52px;
+}
+
+.vanta-meta span {
+  padding: 9px 11px;
+  border: 1px solid rgba(243, 243, 239, 0.14);
+  color: rgba(243, 243, 239, 0.5);
+  font: 500 9px var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.vanta-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  padding: 34px 7vw;
+  background: #edf0ec;
+  color: #101415;
+  font-size: 9px;
+}
+
+.vanta-next a { display: grid; gap: 5px; }
+.vanta-next strong {
+  font: 500 18px var(--font-display);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+/* Main work card */
+.vanta-project-card .vanta-visual {
+  height: 315px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('vanta-assets/vanta-cover.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.vanta-project-card .vanta-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 9, 10, 0.04), rgba(7, 9, 10, 0.68));
+}
+
+.vanta-cover-label {
+  position: absolute;
+  left: 7%;
+  bottom: 9%;
+  z-index: 2;
+  display: grid;
+  gap: 5px;
+  color: var(--vanta-white);
+}
+
+.vanta-cover-label span,
+.vanta-cover-label em {
+  font: 500 8px var(--font-display);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.vanta-cover-label strong {
+  font: 600 clamp(45px, 6vw, 88px) / 0.82 var(--font-display);
+  letter-spacing: -0.075em;
+}
+
+.vanta-cover-label em { color: rgba(243, 243, 239, 0.65); }
+
+.vanta-cover-arrow {
+  position: absolute;
+  top: 7%;
+  right: 6%;
+  z-index: 2;
+  color: var(--vanta-white);
+  font-size: 21px;
+}
+
+@media (max-width: 900px) {
+  .vanta-hero,
+  .vanta-story,
+  .vanta-feature,
+  .vanta-feature.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .vanta-hero-copy { padding: 70px 7vw 75px; }
+  .vanta-hero-art, .vanta-hero-art img { min-height: 520px; }
+  .vanta-section { padding: 90px 7vw; }
+  .vanta-feature,
+  .vanta-feature.reverse { gap: 45px; }
+  .vanta-feature.reverse > div:last-child,
+  .vanta-feature.reverse .vanta-art { order: initial; }
+  .vanta-gallery { grid-template-columns: 1fr; }
+  .vanta-gallery .vanta-art:first-child { grid-column: auto; }
+}
+
+@media (max-width: 560px) {
+  .vanta-hero-copy { padding: 55px 6vw 60px; }
+  .vanta-hero h1 { font-size: 22vw; }
+  .vanta-tagline { font-size: 28px; }
+  .vanta-hero-text { font-size: 13px; }
+  .vanta-hero-art, .vanta-hero-art img { min-height: 400px; }
+  .vanta-section { padding: 72px 6vw; }
+  .vanta-story h2,
+  .vanta-feature h2 { font-size: 48px; }
+  .vanta-closing { padding: 100px 6vw; }
+  .vanta-closing h2 { font-size: 62px; }
+  .vanta-next { padding: 28px 6vw; }
+  .vanta-project-card .vanta-visual { height: 220px; }
+}
