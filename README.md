@@ -1,14 +1,6 @@
 # MILOUD KARA — Portfolio
 
-**Creative Designer · Brand Identity · UI/UX · Digital Experiences**
-
-A curated portfolio showcasing selected work across **brand identity, visual design, UI/UX, digital experiences, and creative strategy**.
-
-Built from scratch with HTML, CSS and JavaScript.
-
----
-
-## ✦ About
+## ✦ Overview
 
 This portfolio is designed as a digital representation of my creative practice — combining visual identity, interface design, digital experiences and strategic thinking.
 
